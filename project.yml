@@ -1,0 +1,29 @@
+name: LiDARScan
+options:
+  bundleIdPrefix: com.lidarscan
+  deploymentTarget:
+    iOS: "16.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  LiDARScan:
+    type: application
+    platform: iOS
+    sources: [LiDARScan]
+    info:
+      path: LiDARScan/Info.plist
+      properties:
+        CFBundleDisplayName: LiDAR Scan
+        NSCameraUsageDescription: Camera and LiDAR are used to scan 3D geometry.
+        UIRequiredDeviceCapabilities: [arkit]
+        UIFileSharingEnabled: true
+        LSSupportsOpeningDocumentsInPlace: true
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.lidarscan.app
+        TARGETED_DEVICE_FAMILY: "1,2"
